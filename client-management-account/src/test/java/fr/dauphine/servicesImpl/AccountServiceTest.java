@@ -5,6 +5,7 @@
  */
 package fr.dauphine.servicesImpl;
 
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
 
@@ -15,6 +16,9 @@ import org.mockito.runners.MockitoJUnitRunner;
 @RunWith(MockitoJUnitRunner.class)
 public class AccountServiceTest {
     
-    
+    @Test
+    public void emptyTest(){
+        
+    }
     
 }

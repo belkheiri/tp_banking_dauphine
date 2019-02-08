@@ -1,0 +1,25 @@
+version: '3'
+services:
+  service-euureka:
+    image: "dauphine/client-management-eureka"
+    ports:
+     - "8761:8761"
+    deploy:
+      replicas: 1
+
+
+  service-account:
+    image: "dauphine/client-management-account"
+    ports:
+     - "9500:9500"
+    deploy:
+      replicas: 2
+
+  service-transaction:
+    image: "dauphine/client-management-transaction"
+    ports:
+     - "9002:9002"
+    deploy:
+      replicas: 2
+
+
