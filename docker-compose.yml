@@ -1,6 +1,6 @@
 version: '3'
 services:
-  service-euureka:
+  service-eureka:
     image: "dauphine/client-management-eureka"
     ports:
      - "8761:8761"
@@ -13,13 +13,16 @@ services:
     ports:
      - "9500:9500"
     deploy:
-      replicas: 2
-
+      replicas: 1
+    environment:
+      - EUREKA_SERVER_ADDRESS=http://service-eureka:8761
+  
   service-transaction:
     image: "dauphine/client-management-transaction"
     ports:
      - "9002:9002"
     deploy:
-      replicas: 2
-
+      replicas: 1
+    environment:
+      - EUREKA_SERVER_ADDRESS=http://service-eureka:8761
 

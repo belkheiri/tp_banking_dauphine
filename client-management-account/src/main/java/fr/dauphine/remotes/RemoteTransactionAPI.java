@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  *
  * @author jihane and zouhair
  */
-@FeignClient(name = "SERVICE-TRANSACTION", configuration = FeignClientConfiguration.class)
+@FeignClient(name = "service-transaction", configuration = FeignClientConfiguration.class)
 public interface RemoteTransactionAPI {
     
     @GetMapping("/transactions/find_transactions_by_iban")
